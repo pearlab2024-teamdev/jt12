@@ -72,6 +72,24 @@ wire [13:0] prev1, prevprev1, prev2;
 
 reg [13:0] prev1_din, prevprev1_din, prev2_din;
 
+always @(posedge clk) begin
+
+if(rst)
+    begin
+        op_result_internal <= 14'd0;
+        op_XII <= 14'd0;
+        atten_internal_IX <= 12'd0;
+        signbit_IX <= 0;
+        signbit_X <= 0;
+        signbit_XI <= 0;
+        totalatten_X <= 12'd0;
+        prev1_din <= 14'd0;
+        prevprev1_din <= 14'd0;
+        prev2_din <= 14'd0;
+    end
+
+end
+
 always @(*)
     if( num_ch==3 ) begin
         prev1_din     = s1_enters ? op_result_internal : prev1;
@@ -83,24 +101,24 @@ always @(*)
         prev2_din     = s1_enters ? op_result_internal : prev2;
     end
 
-jt12_sh #( .width(14), .stages(num_ch)) prev1_buffer(
-//  .rst    ( rst       ),
+jt12_sh_rst #( .width(14), .stages(num_ch)) prev1_buffer(
+    .rst    ( rst       ),
     .clk    ( clk       ),
     .clk_en ( clk_en    ),
     .din    ( prev1_din ),
     .drop   ( prev1     )
 );
 
-jt12_sh #( .width(14), .stages(num_ch)) prevprev1_buffer(
-//  .rst    ( rst           ),
+jt12_sh_rst #( .width(14), .stages(num_ch)) prevprev1_buffer(
+    .rst    ( rst           ),
     .clk    ( clk           ),
     .clk_en ( clk_en        ),
     .din    ( prevprev1_din ),
     .drop   ( prevprev1     )
 );
 
-jt12_sh #( .width(14), .stages(num_ch)) prev2_buffer(
-//  .rst    ( rst       ),
+jt12_sh_rst #( .width(14), .stages(num_ch)) prev2_buffer(
+    .rst    ( rst       ),
     .clk    ( clk       ),
     .clk_en ( clk_en    ),
     .din    ( prev2_din ),
@@ -170,7 +188,8 @@ end
 // REGISTER/CYCLE 2-7
 //generate
 //    if( num_ch==6 )
-        jt12_sh #( .width(10), .stages(6)) phasemod_sh(
+        jt12_sh_rst #( .width(10), .stages(6)) phasemod_sh(
+            .rst    ( rst   ),
             .clk    ( clk   ),
             .clk_en ( clk_en),
             .din    ( phasemod_II ),

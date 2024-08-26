@@ -14,7 +14,7 @@ else
     SIMTIME=$(($2 * 1000))
 fi
 
-GOPARAMS="-2610 -d NOSSG -nodecode -time $SIMTIME"
+GOPARAMS="-2203 -d NOSSG -nodecode -time $SIMTIME"
 # Compiles the verilog to avoid the parallel command from issuing parallel compilations
 go $GOPARAMS -f tests/adpcma.jtt -time 1
 

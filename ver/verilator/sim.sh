@@ -8,7 +8,8 @@ GYM_ARG=
 FAST=-DFASTDIV
 VERI_EXTRA="-DSIMULATION"
 WAV_FILE=
-CHIPTYPE="-DYM2612 -DMEGADRIVE_PSG"
+CHIPTYPE="-DYM2612 "
+#CHIPTYPE="-DYM2612 -DMEGADRIVE_PSG"
 SKIPMAKE=FALSE
 
 function set_slow {
@@ -83,7 +84,8 @@ EOF
             WAV_FILE="$1";;
         "-2203")
             echo "YM2203 mode (you should also use -slow too if the audio output is important)"
-            CHIPTYPE="-DYM2203 -DMEGADRIVE_PSG";;
+            CHIPTYPE="-DYM2203 ";;
+            #CHIPTYPE="-DYM2203 -DMEGADRIVE_PSG";;
         "-2610")
             echo "YM2610 mode. The simulation will use real clock dividers for ADCPM accuracy."
             CHIPTYPE="-DYM2610"

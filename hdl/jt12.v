@@ -26,13 +26,13 @@ module jt12 (
     input           rst,        // rst should be at least 6 clk&cen cycles long
     input           clk,        // CPU clock
     input           cen,        // optional clock enable, if not needed leave as 1'b1
-    input   [7:0]   din,
-    input   [1:0]   addr,
-    input           cs_n,
-    input           wr_n,
+    input   [7:0]   din,        // D0~D7の入力?:RD=1,A0=1でここの内容を書き込む
+    input   [1:0]   addr,       // A0?: RD=1でここのアドレスを書き込む
+    input           cs_n,       // #CS?
+    input           wr_n,       // #WR?
 
-    output  [7:0]   dout,
-    output          irq_n,
+    output  [7:0]   dout,       // D0~D7の出力?:#WR=1,A0=1ならここの内容を書き出す。
+    output          irq_n,      // #IRQ?:タイマー割り込み?
     // configuration
     input           en_hifi_pcm,
     // combined output

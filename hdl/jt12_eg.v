@@ -160,7 +160,8 @@ always @(posedge clk) if(clk_en) begin
     eg_V        <= eg_out_IV;
 end
 
-jt12_sh #( .width(1), .stages(4*num_ch) ) u_cntsh(
+jt12_sh_rst #( .width(1), .stages(4*num_ch) ) u_cntsh(
+    .rst    ( rst       ),
     .clk    ( clk       ),
     .clk_en ( clk_en    ),
     .din    ( cnt_lsb_II),

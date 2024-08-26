@@ -22,21 +22,21 @@
 // Wrapper to output only combined channels. Defaults to YM2203 mode.
 
 module jt03(
-    input           rst,        // rst should be at least 6 clk&cen cycles long
+    input           rst,        //#IC rst should be at least 6 clk & cen cycles long
     input           clk,        // CPU clock
     input           cen,        // optional clock enable, if not needed leave as 1'b1
-    input   [7:0]   din,
-    input           addr,
-    input           cs_n,
-    input           wr_n,
+    input   [7:0]   din,        //D0~D7(入力)
+    input           addr,       //A0
+    input           cs_n,       //#CS
+    input           wr_n,       //#WR
 
-    output  [7:0]   dout,
-    output          irq_n,
+    output  [7:0]   dout,       //D0~D7(出力)
+    output          irq_n,      //#IRQ(割り込み)
     // I/O pins used by YM2203 embedded YM2149 chip
-    input   [7:0]   IOA_in,
-    input   [7:0]   IOB_in,
-    output  [7:0]   IOA_out,
-    output  [7:0]   IOB_out,
+    input   [7:0]   IOA_in,     //IOA0~7(汎用入力)
+    input   [7:0]   IOB_in,     //IOB0~7    
+    output  [7:0]   IOA_out,    //IOA0~7(汎用出力)
+    output  [7:0]   IOB_out,    //IOB0~7
     output          IOA_oe,
     output          IOB_oe,
     // Separated output
@@ -53,7 +53,7 @@ module jt03(
     output          [ 7:0] debug_view
 );
 
-parameter YM2203_LUMPED=0; // set to 1 if all PSG outputs are shorted together without any resistor
+parameter YM2203_LUMPED=1; // set to 1 if all PSG outputs are shorted together without any resistor
 
 jt12_top #(
     .use_lfo(0),.use_ssg(1), .num_ch(3), .use_pcm(0), .use_adpcm(0), .mask_div(0),

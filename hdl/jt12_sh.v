@@ -30,6 +30,10 @@ module jt12_sh #(parameter width=5, stages=24 )
 
 reg [stages-1:0] bits[width-1:0];
 
+initial begin
+    
+end
+
 genvar i;
 generate
 	for (i=0; i < width; i=i+1) begin: bit_shifter

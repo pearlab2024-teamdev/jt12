@@ -68,7 +68,7 @@ wire	[ 7:0]	din, dout;
 wire signed	[11:0]	right, left;
 wire	[ 1:0]	addr;
 
-jt12_testdata #(.rand_wait(`RANDWAIT)) u_testdata(
+jt12_testdata #(.rand_wait(0)) u_testdata(
 	.rst	( rst	),
 	.clk	( clk	),
 	.cs_n	( cs_n	),
@@ -102,7 +102,7 @@ jt12 uut(
 	.cs_n		( cs_n	),
 	.wr_n		( wr_n	),
 
-	.limiter_en( 1'b1 ),
+	//.limiter_en( 1'b1 ),
 
 	.dout		( dout	),
 	.irq_n		( irq_n	),
@@ -110,10 +110,10 @@ jt12 uut(
 	.snd_left	( snd_left	),
 	.snd_right	( snd_right	),
 	// unused outputs
-	.snd_sample(),
-	.mux_right(),
-	.mux_left(),
-	.mux_sample()
+	.snd_sample()
+	//.mux_right(),
+	//.mux_left(),
+	//.mux_sample()
 );
 
 `ifdef DUMPSOUND

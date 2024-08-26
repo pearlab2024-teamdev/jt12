@@ -248,7 +248,7 @@ int main(int argc, char** argv, char** env) {
             sscanf(argv[++k],"%d",&aux);
             cerr << "Trace will start at time " << aux << "ms\n";
             trace_start_time = aux;
-            trace_start_time *= 1000'000;
+            trace_start_time *= 0;
             trace=true;
             continue; 
         }

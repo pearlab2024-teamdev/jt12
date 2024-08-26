@@ -74,11 +74,11 @@ module jt12_top (
 
 // parameters to select the features for each chip type
 // defaults to YM2612
-parameter use_lfo=1, use_ssg=0, num_ch=6, use_pcm=1;
+parameter use_lfo=0, use_ssg=1, num_ch=6, use_pcm=1;
 parameter use_adpcm=0;
 parameter JT49_DIV=2,
-          YM2203_LUMPED=0;
-parameter mask_div=1;
+          YM2203_LUMPED=1;
+parameter mask_div=0;
 
 wire flag_A, flag_B, busy;
 
@@ -556,7 +556,8 @@ jt12_eg #(.num_ch(num_ch)) u_eg(
     .pg_rst_II      ( pg_rst_II     )
 );
 
-jt12_sh #(.width(10),.stages(4)) u_egpad(
+jt12_sh_rst #(.width(10),.stages(4)) u_egpad(
+    .rst    ( rst       ),
     .clk    ( clk       ),
     .clk_en ( clk_en    ),
     .din    ( eg_V      ),
@@ -691,7 +692,7 @@ initial begin
 end
 
 always @(posedge zero) begin
-    $fwrite(fsnd,"%u", {snd_left, snd_right});
+    $fwrite(fsnd,"%b", {snd_left, snd_right});
 end
 `endif
 endmodule

@@ -114,7 +114,8 @@ reg  [1:0] next_op;
 reg  [2:0] next_ch;
 reg last;
 
-`ifdef SIMULATION
+
+//`ifdef SIMULATION
 // These signals need to operate during rst
 // initial state is not relevant (or critical) in real life
 // but we need a clear value during simulation
@@ -127,7 +128,7 @@ initial begin
     last    = 1'b0;
     zero    = 1'b1;
 end
-`endif
+//`endif
 
 assign s1_enters = cur_op == 2'b00;
 assign s3_enters = cur_op == 2'b01;

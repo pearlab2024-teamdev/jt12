@@ -130,8 +130,8 @@ module sine_a4_test;
         IOA_IN = 0;
         IOB_IN = 0;
        
-       // Approx 80 cycles are required for reset. Why you ask? I don't know.
-       #20000 RST = 0;
+       // Jotego says 7 cycle is required for reset
+       #1750 RST = 0;
              WR_N = 0;
              DIN = 8'h27;
         #250 WR_N = 1;

@@ -36,6 +36,9 @@ genvar i;
 generate
 	for (i=0; i < width; i=i+1) begin: bit_shifter
 		always @(posedge clk) if(clk_en) begin
+		    // Using this formula instead decreases cycles required for reset. However, it also results in broken output wave
+			// bits[i] <= rst ? {rstval[0]} : {bits[i][stages-2:0], din[i]};
+			
 			bits[i] <= {bits[i][stages-2:0], din_mx[i]};
 		end
 		assign drop[i] = bits[i][stages-1];

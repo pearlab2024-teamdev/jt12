@@ -54,7 +54,7 @@
 `define KON 8'h28
 `define KON_VALUE 8'h10
 
-module main_test_2;
+module sine_a4_test;
     reg RST;
     reg CLK_IN;
     reg CEN;

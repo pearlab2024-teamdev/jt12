@@ -82,6 +82,23 @@ reg sum_in_III;
 wire [9:0] eg_in_I, pure_eg_out_III, eg_next_III, eg_out_IV;
 reg  [9:0] eg_in_II, eg_in_III, eg_in_IV;
 
+initial begin
+    ssg_inv_II = 1'b0;
+    ssg_inv_III = 1'b0;
+    ssg_inv_IV = 1'b0;
+    attack_II = 1'b0;
+    attack_III = 1'b0;
+    base_rate_II = {1'b0};
+    rate_in_III = {1'b0};
+    step_III = 1'b0;
+    ssg_en_II = 1'b0;
+    ssg_en_III = 1'b0;
+    sum_in_III = 1'b0;
+    eg_in_II = {1'b0};
+    eg_in_III = {1'b0};
+    eg_in_IV = {1'b0};
+end
+
 
 
 jt12_eg_comb u_comb(

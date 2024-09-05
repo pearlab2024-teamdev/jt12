@@ -4,6 +4,8 @@
 	TARGET_BOARD = nexys_video
 	PATH_INVALID = 1
 
+.PHONY: board
+
 all: sub_module board genproj openproj
 
 sub_module:
@@ -11,7 +13,7 @@ sub_module:
 	git submodule update --init --recursive
 
 board:
-	vivado -mode batch -source ./script/board_inst.tcl -tclargs $(TARGET_BOARD)| tee $(BOARD_LOG_FILE)
+	vivado -mode batch -source ./script/board_inst.tcl -tclargs $(TARGET_BOARD) | tee $(BOARD_LOG_FILE)
 	@if grep -q "Board part '$(TARGET_BOARD)' does not exist." $(BOARD_LOG_FILE); then \
 		echo "install '$(TARGET_BOARD)' file."; \
 		mkdir -p board; \

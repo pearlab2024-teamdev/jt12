@@ -5,8 +5,7 @@ all: sub_module board genproj openproj
 
 sub_module:
 	cd ..
-	git update --init --recursive
-	cd vivado
+	git submodule update --init --recursive
 
 board:
 	vivado -mode batch -source ./script/board_inst.tcl

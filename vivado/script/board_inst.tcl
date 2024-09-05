@@ -21,15 +21,17 @@ foreach board $board_parts {
     }
 }
 
+# vivadoのパスを通す。
+if {$path_invalid == 1} {
+    cd board
+    set_param board.repoPaths {vivado-boards/new/board_files}
+    cd $origin_path
+    puts "Complete setting board part files's path."
+}
+
 # 結果を表示
 if { $board_exists } {
     puts "Board part '$target_board' exists."
-    if {$path_invalid == 1} {
-        cd board
-        set_param board.repoPaths {vivado-boards/new/board_files}
-        cd $origin_path
-        puts "Complete setting board part files's path."
-    }
 } else {
     puts "Board part '$target_board' does not exist."
 }

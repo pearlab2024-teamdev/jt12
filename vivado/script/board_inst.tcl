@@ -25,7 +25,7 @@ if { $board_exists } {
     puts "Board part '$target_board' does not exist."
     exec mkdir board
     cd board
-    exec git clone https://github.com/Digilent/vivado-boards
+    exec /bin/sh git clone https://github.com/Digilent/vivado-boards
     set_param board.repoPaths {vivado-boards/new/board_files}
     cd $origin_path
     puts "install Board part '$target_board'."

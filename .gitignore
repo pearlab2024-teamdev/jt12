@@ -20,3 +20,7 @@ obj_dir
 ise/*
 .DS_Store
 
+vivado/ym2203_project/
+vivado/*.jou
+vivado/*.log
+vivado/board/

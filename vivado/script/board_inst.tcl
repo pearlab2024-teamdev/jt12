@@ -23,11 +23,14 @@ foreach board $board_parts {
 
 # vivadoのパスを通す。
 if {$path_invalid == 1} {
-    cd board
-    set_param board.repoPaths {vivado-boards/new/board_files}
+    puts [pwd]
+    source script/board_test.tcl
+#    set_param board.repoPaths {board}
     cd $origin_path
     puts "Complete setting board part files's path."
 }
+
+set get_target_board [get_board_parts -quiet -latest_file_version "*${target_board}*"]
 
 # 結果を表示
 if { $board_exists } {

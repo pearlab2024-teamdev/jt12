@@ -6,25 +6,25 @@
 
 .PHONY: board
 
-all: sub_module board genproj openproj
+all: sub_module genproj openproj
 
 sub_module:
 	cd ..
 	git submodule update --init --recursive
 
-board:
-	vivado -mode batch -source ./script/board_inst.tcl -tclargs $(TARGET_BOARD) | tee $(BOARD_LOG_FILE)
-	@if grep -q "Board part '$(TARGET_BOARD)' does not exist." $(BOARD_LOG_FILE); then \
-		echo "install '$(TARGET_BOARD)' file."; \
-		mkdir -p board; \
-		cd board; \
-		git clone https://github.com/Digilent/vivado-boards; \
-		cd $(ORIGIN_PATH); \
-		vivado -mode batch -source ./script/board_inst.tcl -tclargs $(TARGET_BOARD) $(PATH_INVALID); \
-	else \
-		echo "Board part '$(TARGET_BOARD)' found."; \
-	fi
-	rm $(BOARD_LOG_FILE)
+#board:
+#	vivado -mode batch -source ./script/board_inst.tcl -tclargs $(TARGET_BOARD)| tee $(BOARD_LOG_FILE)
+#	@if grep -q "Board part '$(TARGET_BOARD)' does not exist." $(BOARD_LOG_FILE); then \
+#		echo "install '$(TARGET_BOARD)' file."; \
+#		mkdir -p board; \
+#		cd board; \
+#		git clone https://github.com/Digilent/vivado-boards; \
+#		cd $(ORIGIN_PATH); \
+#		vivado -mode batch -source ./script/board_inst.tcl -tclargs $(TARGET_BOARD) $(PATH_INVALID); \
+#	else \
+#		echo "Board part '$(TARGET_BOARD)' found."; \
+#	fi
+#	rm $(BOARD_LOG_FILE)
 genproj:
 	@if [ -e $(PROJ_FILE_PATH) ]; then \
 		echo "$(PROJ_FILE_PATH) exists."; \

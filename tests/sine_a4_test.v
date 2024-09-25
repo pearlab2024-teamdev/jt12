@@ -151,8 +151,7 @@ module sine_a4_test;
     WR_N = 1;
 
     //FB/CON
-    #250 RST = 0;
-    WR_N = 0;
+    #2250 WR_N = 0;
     DIN  = `FBCN;
     #250 WR_N = 1;
     #250 DIN = `FBCN_VALUE;

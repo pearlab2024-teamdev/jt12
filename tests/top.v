@@ -53,11 +53,10 @@ module top(
     //output          [ 7:0] debug_view
     );
     
-    wire clk;
     
    jt03 u_jt03(
         .rst(rst),
-        .clk(clk),
+        .clk(clk_in),
         .cen(cen),
         .din(din),
         .addr(addr),
@@ -83,15 +82,10 @@ module top(
         );
         
     pwm_6bit pwm(
-        .CLK(clk),
+        .CLK(clk_in),
         .RESET(rst),
-        .signalIn(psg_snd[9:4]),
+        .signalIn(snd[15:10]),
         .pwmOut(snd_pwm)
     );
     
-  // インスタンス化
-BUFG bufg_inst (
-    .I(clk_in),
-    .O(clk)
-);  
 endmodule

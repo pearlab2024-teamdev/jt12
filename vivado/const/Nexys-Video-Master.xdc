@@ -5,8 +5,8 @@
 
 
 ## Clock Signal
-set_property -dict { PACKAGE_PIN R4    IOSTANDARD LVCMOS33 } [get_ports { CLK_IN }]; #IO_L13P_T2_MRCC_34 Sch=sysclk
-create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports CLK_IN]
+set_property -dict {PACKAGE_PIN R4 IOSTANDARD LVCMOS33} [get_ports CLK_IN]
+create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports CLK_IN]
 
 ## FMC Transceiver clocks (Must be set to value provided by Mezzanine card, currently set to 156.25 MHz)
 ## Note: This clock is attached to a MGTREFCLK pin
@@ -30,7 +30,7 @@ set_property -dict { PACKAGE_PIN Y13   IOSTANDARD LVCMOS25 } [get_ports {leds_ou
 
 
 ## Buttons
-#set_property -dict { PACKAGE_PIN B22 IOSTANDARD LVCMOS12 } [get_ports { RST }]; #IO_L20N_T3_16 Sch=btnc
+set_property -dict { PACKAGE_PIN B22 IOSTANDARD LVCMOS12 } [get_ports { RST }]; #IO_L20N_T3_16 Sch=btnc
 #set_property -dict { PACKAGE_PIN D22 IOSTANDARD LVCMOS12 } [get_ports { btnd }]; #IO_L22N_T3_16 Sch=btnd
 #set_property -dict { PACKAGE_PIN C22 IOSTANDARD LVCMOS12 } [get_ports { btnl }]; #IO_L20P_T3_16 Sch=btnl
 #set_property -dict { PACKAGE_PIN D14 IOSTANDARD LVCMOS12 } [get_ports { btnr }]; #IO_L6P_T0_16 Sch=btnr
@@ -106,10 +106,10 @@ set_property -dict { PACKAGE_PIN G21  IOSTANDARD LVCMOS12 } [get_ports { test_sw
 
 
 ## Pmod header JA
-set_property -dict { PACKAGE_PIN AB22  IOSTANDARD LVCMOS33 } [get_ports { snd_pwm }]; #IO_L10N_T1_D15_14 Sch=ja[1]
-set_property -dict { PACKAGE_PIN AB21  IOSTANDARD LVCMOS33 } [get_ports { ACTIVE_HIGH }]; #IO_L10P_T1_D14_14 Sch=ja[2]
+set_property -dict {PACKAGE_PIN AB22 IOSTANDARD LVCMOS33} [get_ports snd_pwm]
+set_property -dict {PACKAGE_PIN AB21 IOSTANDARD LVCMOS33} [get_ports ACTIVE_HIGH]
 #set_property -dict { PACKAGE_PIN AB20  IOSTANDARD LVCMOS33 } [get_ports { ja[2] }]; #IO_L15N_T2_DQS_DOUT_CSO_B_14 Sch=ja[3]
-set_property -dict { PACKAGE_PIN AB18  IOSTANDARD LVCMOS33 } [get_ports { ACTIVE_LOW }]; #IO_L17N_T2_A13_D29_14 Sch=ja[4]
+set_property -dict {PACKAGE_PIN AB18 IOSTANDARD LVCMOS33} [get_ports ACTIVE_LOW]
 #set_property -dict { PACKAGE_PIN Y21   IOSTANDARD LVCMOS33 } [get_ports { ja[4] }]; #IO_L9P_T1_DQS_14 Sch=ja[7]
 #set_property -dict { PACKAGE_PIN AA21  IOSTANDARD LVCMOS33 } [get_ports { ja[5] }]; #IO_L8N_T1_D12_14 Sch=ja[8]
 #set_property -dict { PACKAGE_PIN AA20  IOSTANDARD LVCMOS33 } [get_ports { ja[6] }]; #IO_L8P_T1_D11_14 Sch=ja[9]
@@ -310,3 +310,4 @@ set_property -dict { PACKAGE_PIN N13   IOSTANDARD LVCMOS33   PULLUP true } [get_
 ## Configuration options, can be used for all designs
 set_property CONFIG_VOLTAGE 3.3 [current_design]
 set_property CFGBVS VCCO [current_design]
+

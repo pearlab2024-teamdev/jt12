@@ -23,6 +23,7 @@
 module top(
     input           rst,        //#IC rst should be at least 6 clk & cen cycles long
     input           clk_in,        // CPU clock
+    input           clk_100,
     input           cen,        // optional clock enable, if not needed leave as 1'b1
     input   [7:0]   din,        //D0~D7(入力)
     input           addr,       //A0
@@ -81,8 +82,8 @@ module top(
         .debug_view(debug_view)
         );
         
-    pwm_6bit pwm(
-        .CLK(clk_in),
+    pwm_6bit_signed pwm(
+        .CLK(clk_100),
         .RESET(rst),
         .signalIn(snd[15:10]),
         .pwmOut(snd_pwm)

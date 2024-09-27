@@ -12,12 +12,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
-      <ZoomEndTime time="1,257.000000001 ms"></ZoomEndTime>
-      <Cursor1Time time="37.000000000 ms"></Cursor1Time>
+      <ZoomEndTime time="34.100000001 ms"></ZoomEndTime>
+      <Cursor1Time time="3.500000000 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="91"></NameColumnWidth>
-      <ValueColumnWidth column_width="82"></ValueColumnWidth>
+      <ValueColumnWidth column_width="78"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
    <wvobject type="array" fp_name="/add_selector_test/uut/fm_snd">

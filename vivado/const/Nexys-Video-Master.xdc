@@ -30,7 +30,7 @@ set_property -dict { PACKAGE_PIN Y13   IOSTANDARD LVCMOS25 } [get_ports {leds_ou
 
 
 ## Buttons
-set_property -dict { PACKAGE_PIN B22 IOSTANDARD LVCMOS12 } [get_ports { RST }]; #IO_L20N_T3_16 Sch=btnc
+set_property -dict {PACKAGE_PIN B22 IOSTANDARD LVCMOS12} [get_ports RST]
 #set_property -dict { PACKAGE_PIN D22 IOSTANDARD LVCMOS12 } [get_ports { btnd }]; #IO_L22N_T3_16 Sch=btnd
 #set_property -dict { PACKAGE_PIN C22 IOSTANDARD LVCMOS12 } [get_ports { btnl }]; #IO_L20P_T3_16 Sch=btnl
 #set_property -dict { PACKAGE_PIN D14 IOSTANDARD LVCMOS12 } [get_ports { btnr }]; #IO_L6P_T0_16 Sch=btnr
@@ -107,7 +107,7 @@ set_property -dict { PACKAGE_PIN G21  IOSTANDARD LVCMOS12 } [get_ports { test_sw
 
 ## Pmod header JA
 set_property -dict {PACKAGE_PIN AB22 IOSTANDARD LVCMOS33} [get_ports snd_pwm]
-set_property -dict {PACKAGE_PIN AB21 IOSTANDARD LVCMOS33} [get_ports ACTIVE_HIGH]
+#set_property -dict {PACKAGE_PIN AB21 IOSTANDARD LVCMOS33} [get_ports ACTIVE_HIGH]
 #set_property -dict { PACKAGE_PIN AB20  IOSTANDARD LVCMOS33 } [get_ports { ja[2] }]; #IO_L15N_T2_DQS_DOUT_CSO_B_14 Sch=ja[3]
 set_property -dict {PACKAGE_PIN AB18 IOSTANDARD LVCMOS33} [get_ports ACTIVE_LOW]
 #set_property -dict { PACKAGE_PIN Y21   IOSTANDARD LVCMOS33 } [get_ports { ja[4] }]; #IO_L9P_T1_DQS_14 Sch=ja[7]
@@ -311,3 +311,129 @@ set_property -dict { PACKAGE_PIN N13   IOSTANDARD LVCMOS33   PULLUP true } [get_
 set_property CONFIG_VOLTAGE 3.3 [current_design]
 set_property CFGBVS VCCO [current_design]
 
+
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_top/u_jt03/snd_right[0]} {u_top/u_jt03/snd_right[1]} {u_top/u_jt03/snd_right[2]} {u_top/u_jt03/snd_right[3]} {u_top/u_jt03/snd_right[4]}]]
+connect_debug_port u_ila_0/probe1 [get_nets [list {u_top/u_jt03/u_jt12/snd_left[0]} {u_top/u_jt03/u_jt12/snd_left[1]} {u_top/u_jt03/u_jt12/snd_left[2]} {u_top/u_jt03/u_jt12/snd_left[3]} {u_top/u_jt03/u_jt12/snd_left[4]}]]
+connect_debug_port u_ila_1/probe0 [get_nets [list {u_top/u_jt03/u_jt12/Q[0]} {u_top/u_jt03/u_jt12/Q[1]} {u_top/u_jt03/u_jt12/Q[2]} {u_top/u_jt03/u_jt12/Q[3]}]]
+
+
+
+
+
+
+connect_debug_port u_ila_0/clk [get_nets [list CLK_4_BUFG]]
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_top/u_jt03/ch_din_reg[7][0]} {u_top/u_jt03/ch_din_reg[7][1]} {u_top/u_jt03/ch_din_reg[7][2]} {u_top/u_jt03/ch_din_reg[7][3]} {u_top/u_jt03/ch_din_reg[7][4]} {u_top/u_jt03/ch_din_reg[7][5]} {u_top/u_jt03/ch_din_reg[7][6]} {u_top/u_jt03/ch_din_reg[7][7]}]]
+connect_debug_port u_ila_0/probe1 [get_nets [list {u_top/u_jt03/u_jt12/ch_din_reg[7][0]} {u_top/u_jt03/u_jt12/ch_din_reg[7][1]} {u_top/u_jt03/u_jt12/ch_din_reg[7][2]} {u_top/u_jt03/u_jt12/ch_din_reg[7][3]} {u_top/u_jt03/u_jt12/ch_din_reg[7][4]} {u_top/u_jt03/u_jt12/ch_din_reg[7][5]} {u_top/u_jt03/u_jt12/ch_din_reg[7][6]} {u_top/u_jt03/u_jt12/ch_din_reg[7][7]}]]
+connect_debug_port u_ila_0/probe3 [get_nets [list {u_top/D[0]} {u_top/D[1]} {u_top/D[2]} {u_top/D[3]} {u_top/D[4]} {u_top/D[5]} {u_top/D[6]} {u_top/D[7]}]]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][0]}]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][1]}]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][2]}]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][3]}]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][4]}]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][5]}]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][6]}]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][7]}]
+connect_debug_port dbg_hub/clk [get_nets CLK_4_BUFG]
+
+
+
+
+
+set_property MARK_DEBUG true [get_nets {DIN[5]}]
+set_property MARK_DEBUG true [get_nets {DIN[7]}]
+set_property MARK_DEBUG true [get_nets {DIN[0]}]
+set_property MARK_DEBUG true [get_nets {DIN[1]}]
+set_property MARK_DEBUG true [get_nets {DIN[2]}]
+set_property MARK_DEBUG true [get_nets {DIN[4]}]
+set_property MARK_DEBUG true [get_nets {DIN[6]}]
+set_property MARK_DEBUG true [get_nets {DIN[3]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[0]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[5]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[6]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[7]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[1]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[2]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[3]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[4]}]
+connect_debug_port u_ila_0/clk [get_nets [list CLK_4_BUFG]]
+connect_debug_port dbg_hub/clk [get_nets CLK_4_BUFG]
+
+
+create_debug_core u_ila_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 16384 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 4 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list CLK_100]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+set_property port_width 1 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_top/p_1_in[15]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list u_top/u_jt03_n_1]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list u_top/u_jt03_n_2]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list u_top/u_jt03_n_3]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list u_top/u_jt03_n_4]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list u_top/u_jt03_n_5]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list u_top/u_jt03_n_6]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+set_property port_width 1 [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list u_top/u_jt03_n_7]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+set_property port_width 1 [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list u_top/u_jt03_n_8]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+set_property port_width 1 [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list u_top/u_jt03_n_9]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+set_property port_width 1 [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list u_top/u_jt03_n_10]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
+set_property port_width 1 [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list u_top/u_jt03_n_11]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
+set_property port_width 1 [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list u_top/u_jt03_n_12]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe13]
+set_property port_width 1 [get_debug_ports u_ila_0/probe13]
+connect_debug_port u_ila_0/probe13 [get_nets [list u_top/u_jt03_n_13]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe14]
+set_property port_width 1 [get_debug_ports u_ila_0/probe14]
+connect_debug_port u_ila_0/probe14 [get_nets [list u_top/u_jt03_n_14]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe15]
+set_property port_width 1 [get_debug_ports u_ila_0/probe15]
+connect_debug_port u_ila_0/probe15 [get_nets [list u_top/u_jt03_n_15]]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets CLK_100]

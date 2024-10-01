@@ -1,0 +1,168 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Sep 27 13:18:13 2024
+# Process ID: 1618344
+# Current directory: /home/fss4/tsukano/jt12
+# Command line: vivado
+# Log file: /home/fss4/tsukano/jt12/vivado.log
+# Journal file: /home/fss4/tsukano/jt12/vivado.jou
+# Running On        :norfair
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 20.04.6 LTS
+# Processor Detail  :11th Gen Intel(R) Core(TM) i7-11700 @ 2.50GHz
+# CPU Frequency     :2500.000 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :67178 MB
+# Swap memory       :2147 MB
+# Total Virtual     :69325 MB
+# Available Virtual :57080 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.xpr
+update_compile_order -fileset sources_1
+reset_run blk_mem_gen_5_synth_1
+reset_run blk_mem_gen_3_synth_1
+reset_run blk_mem_gen_4_synth_1
+reset_run blk_mem_gen_2_synth_1
+reset_run blk_mem_gen_1_synth_1
+reset_run blk_mem_gen_0_synth_1
+reset_run blk_mem_gen_Display_synth_1
+reset_run blk_mem_gen_7_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {s25fl032p-spi-x1_x2_x4}] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/fss4/tsukano/music_sequenser/music_sequencer_comp/bitstream/newMario.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+synth_design -top famicom -part xc7a35tcpg236-1 -lint 
+reset_run synth_1
+close_hw_manager
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+upgrade_bd_cells [get_bd_cells /microblaze_0_axi_periph]
+upgrade_ip -srcset blk_mem_gen_6 -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  blk_mem_gen_6] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips blk_mem_gen_6] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+upgrade_ip -srcset blk_mem_gen_3 -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  blk_mem_gen_3] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips blk_mem_gen_3] -no_script -sync -force -quiet
+upgrade_ip -srcset blk_mem_gen_5 -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  blk_mem_gen_5] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips blk_mem_gen_5] -no_script -sync -force -quiet
+upgrade_ip -srcset blk_mem_gen_4 -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  blk_mem_gen_4] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips blk_mem_gen_4] -no_script -sync -force -quiet
+upgrade_ip -srcset blk_mem_gen_2 -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  blk_mem_gen_2] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips blk_mem_gen_2] -no_script -sync -force -quiet
+upgrade_ip -srcset blk_mem_gen_1 -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  blk_mem_gen_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips blk_mem_gen_1] -no_script -sync -force -quiet
+upgrade_ip -srcset blk_mem_gen_0 -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  blk_mem_gen_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips blk_mem_gen_0] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+launch_runs synth_1 -jobs 8
+upgrade_ip -srcset blk_mem_gen_7 -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  blk_mem_gen_7] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips blk_mem_gen_7] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 8
+set_property CONFIG.Coe_File {/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/coe/newMario/newMario2.coe} [get_ips blk_mem_gen_1]
+generate_target all [get_files  /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_1] }
+export_ip_user_files -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci]
+launch_runs blk_mem_gen_1_synth_1 -jobs 8
+wait_on_run blk_mem_gen_1_synth_1
+export_simulation -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci] -directory /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/sim_scripts -ip_user_files_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files -ipstatic_source_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/modelsim} {questa=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/questa} {xcelium=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/xcelium} {vcs=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/vcs} {riviera=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+set_property CONFIG.Coe_File {/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/coe/newMario/newMario1.coe} [get_ips blk_mem_gen_0]
+generate_target all [get_files  /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
+export_ip_user_files -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+launch_runs blk_mem_gen_0_synth_1 -jobs 8
+wait_on_run blk_mem_gen_0_synth_1
+export_simulation -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -directory /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/sim_scripts -ip_user_files_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files -ipstatic_source_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/modelsim} {questa=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/questa} {xcelium=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/xcelium} {vcs=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/vcs} {riviera=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+set_property CONFIG.Coe_File {/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/coe/newMario/newMario3.coe} [get_ips blk_mem_gen_2]
+generate_target all [get_files  /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_2] }
+export_ip_user_files -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci]
+launch_runs blk_mem_gen_2_synth_1 -jobs 8
+wait_on_run blk_mem_gen_2_synth_1
+export_simulation -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci] -directory /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/sim_scripts -ip_user_files_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files -ipstatic_source_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/modelsim} {questa=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/questa} {xcelium=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/xcelium} {vcs=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/vcs} {riviera=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+set_property CONFIG.Coe_File {/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/coe/newMario/newMario4.coe} [get_ips blk_mem_gen_4]
+generate_target all [get_files  /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_4] }
+export_ip_user_files -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.xci]
+launch_runs blk_mem_gen_4_synth_1 -jobs 8
+wait_on_run blk_mem_gen_4_synth_1
+export_simulation -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.xci] -directory /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/sim_scripts -ip_user_files_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files -ipstatic_source_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/modelsim} {questa=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/questa} {xcelium=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/xcelium} {vcs=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/vcs} {riviera=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list \
+  CONFIG.Coe_File {/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.sim/sim_1/behav/xsim/sine_table_2.coe} \
+  CONFIG.Load_Init_File {true} \
+] [get_ips blk_mem_gen_7]
+generate_target all [get_files  /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_7] }
+export_ip_user_files -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7.xci]
+launch_runs blk_mem_gen_7_synth_1 -jobs 8
+wait_on_run blk_mem_gen_7_synth_1
+export_simulation -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7.xci] -directory /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/sim_scripts -ip_user_files_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files -ipstatic_source_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/modelsim} {questa=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/questa} {xcelium=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/xcelium} {vcs=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/vcs} {riviera=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list \
+  CONFIG.Coe_File {/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/coe/sin_table/sine_modulator.coe} \
+  CONFIG.Write_Width_A {128} \
+] [get_ips blk_mem_gen_7]
+generate_target all [get_files  /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_7] }
+export_ip_user_files -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7.xci] -no_script -sync -force -quiet
+reset_run blk_mem_gen_7_synth_1
+launch_runs blk_mem_gen_7_synth_1 -jobs 8
+wait_on_run blk_mem_gen_7_synth_1
+export_simulation -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7.xci] -directory /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/sim_scripts -ip_user_files_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files -ipstatic_source_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/modelsim} {questa=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/questa} {xcelium=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/xcelium} {vcs=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/vcs} {riviera=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+set_property CONFIG.Coe_File {/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.sim/sim_1/behav/xsim/sine_table_2.coe} [get_ips blk_mem_gen_6]
+generate_target all [get_files  /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_6] }
+export_ip_user_files -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6.xci]
+export_simulation -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6.xci] -directory /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/sim_scripts -ip_user_files_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files -ipstatic_source_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/modelsim} {questa=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/questa} {xcelium=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/xcelium} {vcs=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/vcs} {riviera=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+set_property CONFIG.Coe_File {/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/coe/SE/Coin.coe} [get_ips blk_mem_gen_3]
+generate_target all [get_files  /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_3] }
+export_ip_user_files -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.xci]
+launch_runs blk_mem_gen_3_synth_1 -jobs 8
+wait_on_run blk_mem_gen_3_synth_1
+export_simulation -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.xci] -directory /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/sim_scripts -ip_user_files_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files -ipstatic_source_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/modelsim} {questa=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/questa} {xcelium=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/xcelium} {vcs=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/vcs} {riviera=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+set_property CONFIG.Coe_File {/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/coe/SE/PowerUp_as.coe} [get_ips blk_mem_gen_5]
+generate_target all [get_files  /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_5] }
+export_ip_user_files -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5.xci]
+launch_runs blk_mem_gen_5_synth_1 -jobs 8
+wait_on_run blk_mem_gen_5_synth_1
+export_simulation -of_objects [get_files /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5.xci] -directory /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/sim_scripts -ip_user_files_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files -ipstatic_source_dir /home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/modelsim} {questa=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/questa} {xcelium=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/xcelium} {vcs=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/vcs} {riviera=/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+wait_on_run blk_mem_gen_5_synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+set_property CONFIG.Coe_File {/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.sim/sim_1/behav/xsim/sine_table_2.coe} [get_ips blk_mem_gen_6]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_bd_design {/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/bd/design_2/design_2.bd}
+open_bd_design {/home/fss4/tsukano/music_sequenser/music_sequencer_comp/music_sequencer/music_sequencer.srcs/sources_1/bd/design_1/design_1.bd}

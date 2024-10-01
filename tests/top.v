@@ -82,11 +82,18 @@ module top(
         .debug_view(debug_view)
         );
         
-    pwm_6bit_signed pwm(
-        .CLK(clk_100),
-        .RESET(rst),
-        .signalIn(snd[15:10]),
-        .pwmOut(snd_pwm)
+    //pwm_6bit_signed pwm(
+        //.CLK(clk_100),
+        //.RESET(rst),
+        //.signalIn(snd[15:10]),
+        //.pwmOut(snd_pwm)
+    //);
+    
+    pcm_to_pwm pwm(
+        .clk(clk_100),
+        .rst(rst),
+        .pcm_in(snd),
+        .pwm_out(snd_pwm)
     );
     
 endmodule

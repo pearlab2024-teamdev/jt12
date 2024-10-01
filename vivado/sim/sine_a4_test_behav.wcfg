@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
-      <ZoomEndTime time="34.100000001 ms"></ZoomEndTime>
-      <Cursor1Time time="3.500000000 ms"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="7,010.001 ns"></ZoomEndTime>
+      <Cursor1Time time="3,260.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="91"></NameColumnWidth>
-      <ValueColumnWidth column_width="78"></ValueColumnWidth>
+      <ValueColumnWidth column_width="74"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
    <wvobject type="array" fp_name="/add_selector_test/uut/fm_snd">
@@ -39,8 +39,8 @@
       <obj_property name="ElementShortName">CLK_4</obj_property>
       <obj_property name="ObjectShortName">CLK_4</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/add_selector_test/uut/CLK">
-      <obj_property name="ElementShortName">CLK</obj_property>
-      <obj_property name="ObjectShortName">CLK</obj_property>
+   <wvobject type="logic" fp_name="/add_selector_test/RST">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
    </wvobject>
 </wave_config>

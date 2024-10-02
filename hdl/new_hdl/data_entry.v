@@ -51,7 +51,7 @@
 `define KON 8'h28
 `define KON_VALUE 8'h10
 
-module add_selector(
+module data_entry(
     //input RST,
     input CLK_IN,
     //input CEN,

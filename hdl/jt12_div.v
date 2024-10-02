@@ -17,8 +17,9 @@
     Version: 1.0
     Date: 14-2-2017
     */
-
-
+`ifndef SYNTHESIS
+`define SIMULATION
+`endif
 module jt12_div(
     input           rst,
     input           clk,

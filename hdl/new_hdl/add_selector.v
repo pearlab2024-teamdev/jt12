@@ -79,12 +79,14 @@ module add_selector(
     
     //output [7:0] IOA_OUT,
     //output [7:0] IOB_OUT
-    output ACTIVE_LOW
+    output LOW,
+    output HIGH
     //output ACTIVE_HIGH
        
     );
     
-  assign ACTIVE_LOW = 1;
+  assign HIGH = 1;
+  assign LOW = 0;
   //assign ACTIVE_HIGH = 0;
   
   //reg RST = 1;  

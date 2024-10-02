@@ -24,6 +24,10 @@
 
 */
 
+`ifndef SYNTHESIS
+`define SIMULATION
+`endif
+
 
 module jt12_op(
     input           rst,
@@ -72,22 +76,23 @@ wire [13:0] prev1, prevprev1, prev2;
 
 reg [13:0] prev1_din, prevprev1_din, prev2_din;
 
-//always @(posedge clk) begin
-//if(rst)
-    //begin
-        //op_result_internal <= 14'd0;
-        //op_XII <= 14'd0;
-        //atten_internal_IX <= 12'd0;
-        //signbit_IX <= 0;
-        //signbit_X <= 0;
-        //signbit_XI <= 0;
-        //totalatten_X <= 12'd0;
-        //prev1_din <= 14'd0;
-        //prevprev1_din <= 14'd0;
-        //prev2_din <= 14'd0;
-    //end
-
-//end
+`ifdef SIMULATION
+always @(posedge clk) begin
+if(rst)
+    begin
+        op_result_internal <= 14'd0;
+        op_XII <= 14'd0;
+        atten_internal_IX <= 12'd0;
+        signbit_IX <= 0;
+        signbit_X <= 0;
+        signbit_XI <= 0;
+        totalatten_X <= 12'd0;
+        prev1_din <= 14'd0;
+        prevprev1_din <= 14'd0;
+        prev2_din <= 14'd0;
+    end
+end
+`endif
 
 always @(*)
     if( num_ch==3 ) begin

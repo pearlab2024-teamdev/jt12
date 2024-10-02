@@ -37,11 +37,15 @@ module clock_divider(
         if (reset) begin
             counter <= 0;
             clk_4mhz <= 0;
+        end else if (counter == 12) begin
+            clk_4mhz <= 1;
+            counter <= counter + 1;
         end else if (counter == 24) begin
             counter <= 0;
-            clk_4mhz <= ~clk_4mhz;  // 4MHz出力を反転
-        end else begin
-            counter <= counter + 1;
+            clk_4mhz <= 0;
+        end
+        else begin
+            counter <= counter + 1;            
         end
     end
 endmodule

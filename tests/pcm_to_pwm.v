@@ -22,23 +22,31 @@
 
 module pcm_to_pwm (
     input clk,          // クロック信号
+    input rst,
     input signed [15:0] pcm_in, // 16ビットのPCM信号（符号付き）
     output reg pwm_out  // PWM信号の出力
+    
 );
 
-    reg signed [15:0] threshold; // PWM閾値（16ビットの符号付き）
-    reg signed [15:0] counter;   // カウンター（16ビットの符号付き）
-
+    reg [15:0] threshold; // PWM閾値（16ビットの符号付き）
+    reg [15:0] counter;   // カウンター（16ビットの符号付き）
     always @(posedge clk) begin
-        counter <= counter + 1;
-        // PCM信号からPWM閾値を設定
-        threshold <= pcm_in;
-        
+        if (rst) begin 
+            counter <= 0;
+            threshold <= 16'h8000;
+        end
+        else begin
+        counter <= counter + 256;        
         // PWM出力の生成
-        if (counter < threshold) begin
+        if (counter == 0) begin
+            threshold <= pcm_in ^ 16'h8000;
+            pwm_out <= 1;
+        end
+        else if (counter < threshold) begin
             pwm_out <= 1; // パルスの高状態
         end else begin
             pwm_out <= 0; // パルスの低状態
+        end
         end
     end
 

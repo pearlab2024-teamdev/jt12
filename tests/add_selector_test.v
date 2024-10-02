@@ -84,7 +84,7 @@ module add_selector_test;
     CLK_IN = 0;
     RST = 1;
    
-  #1750 RST = 0;
+  #35000 RST = 0;
   
   #1000000000 $stop;
   

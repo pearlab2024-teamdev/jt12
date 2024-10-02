@@ -52,7 +52,7 @@
 `define KON_VALUE 8'h10
 
 module add_selector(
-    //input RST,
+    input RST,
     input CLK_IN,
     //input CEN,
     //input [7:0] DIN,
@@ -79,20 +79,20 @@ module add_selector(
     
     //output [7:0] IOA_OUT,
     //output [7:0] IOB_OUT
-    output ACTIVE_LOW,
-    output ACTIVE_HIGH
+    output ACTIVE_LOW
+    //output ACTIVE_HIGH
        
     );
     
   assign ACTIVE_LOW = 1;
-  assign ACTIVE_HIGH = 0;
+  //assign ACTIVE_HIGH = 0;
   
-  reg RST = 1;  
-  reg CEN = 1'b1;
-  reg [7:0] DIN = 0;
-  reg ADDR = 0;
-  reg CS_N = 0;
-  reg WR_N = 1;
+  //reg RST = 1;  
+  reg CEN;
+  reg [7:0] DIN;
+  reg ADDR;
+  reg CS_N;
+  reg WR_N;
   
   wire [7:0] DOUT;
   wire       irq_n;
@@ -157,27 +157,34 @@ module add_selector(
   
     
     
-    reg [15:0] counter = 0;
+    reg [15:0] counter;
     
     //データ書き込みタイミングを取るためのカウンタ
     always @(posedge CLK_4)
     begin
-        //if(RST)
-        //begin
-            //counter <= 0;
-        //end
+        if(RST)
+        begin
+            counter <= 0;
+        end
         
-        //else
+        else
             counter <= counter + 1;     
     end
     
     //レジスタにsin波を発生させるためのデータを書き込んでいる。
     always @(posedge CLK_4)
     begin
-    
-            if(counter == 8'h07)
+            if(RST)
             begin
-                RST = 0;
+                CEN <= 1'b1;
+                DIN <= 8'b0;
+                ADDR <= 0;
+                CS_N <= 0;
+                WR_N <= 1;
+            end
+    
+            if(counter == 16'h0007)
+            begin
                 WR_N = 0;
                 DIN = 8'h27;
             end

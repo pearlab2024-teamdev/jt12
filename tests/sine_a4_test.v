@@ -130,7 +130,7 @@ module sine_a4_test;
     IOB_IN = 0;
 
     // Jotego says 7 cycle is required for reset
-    #1750 RST = 0;
+    #175000 RST = 0;
     WR_N = 0;
     DIN  = 8'h27;
     #250 WR_N = 1;
@@ -151,8 +151,7 @@ module sine_a4_test;
     WR_N = 1;
 
     //FB/CON
-    #250 RST = 0;
-    WR_N = 0;
+    #2250 WR_N = 0;
     DIN  = `FBCN;
     #250 WR_N = 1;
     #250 DIN = `FBCN_VALUE;

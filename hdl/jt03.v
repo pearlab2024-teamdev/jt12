@@ -106,5 +106,4 @@ u_jt12(
     .debug_bus      ( 8'd0         ),
     .debug_view     ( debug_view   )
 );
-
 endmodule // jt03

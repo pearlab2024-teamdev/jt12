@@ -5,8 +5,8 @@
 
 
 ## Clock Signal
-set_property -dict { PACKAGE_PIN R4    IOSTANDARD LVCMOS33 } [get_ports { clk_in[0] }]; #IO_L13P_T2_MRCC_34 Sch=sysclk
-#create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
+set_property -dict {PACKAGE_PIN R4 IOSTANDARD LVCMOS33} [get_ports CLK_IN]
+create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports CLK_IN]
 
 ## FMC Transceiver clocks (Must be set to value provided by Mezzanine card, currently set to 156.25 MHz)
 ## Note: This clock is attached to a MGTREFCLK pin
@@ -19,29 +19,29 @@ set_property -dict { PACKAGE_PIN R4    IOSTANDARD LVCMOS33 } [get_ports { clk_in
 
 
 ## LEDs
-set_property -dict { PACKAGE_PIN T14   IOSTANDARD LVCMOS25 } [get_ports {leds_out[0]}]; #IO_L15P_T2_DQS_13 Sch=led[0]
-set_property -dict { PACKAGE_PIN T15   IOSTANDARD LVCMOS25 } [get_ports {leds_out[1]}]; #IO_L15N_T2_DQS_13 Sch=led[1]
-set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS25 } [get_ports {leds_out[2]}]; #IO_L17P_T2_13 Sch=led[2]
-set_property -dict { PACKAGE_PIN U16   IOSTANDARD LVCMOS25 } [get_ports {leds_out[3]}]; #IO_L17N_T2_13 Sch=led[3]
-set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS25 } [get_ports {leds_out[4]}]; #IO_L14N_T2_SRCC_13 Sch=led[4]
-set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS25 } [get_ports {leds_out[5]}]; #IO_L16N_T2_13 Sch=led[5]
-set_property -dict { PACKAGE_PIN W15   IOSTANDARD LVCMOS25 } [get_ports {leds_out[6]}]; #IO_L16P_T2_13 Sch=led[6]
-set_property -dict { PACKAGE_PIN Y13   IOSTANDARD LVCMOS25 } [get_ports {leds_out[7]}]; #IO_L5P_T0_13 Sch=led[7]
+#set_property -dict { PACKAGE_PIN T14   IOSTANDARD LVCMOS25 } [get_ports {leds_out[0]}]; #IO_L15P_T2_DQS_13 Sch=led[0]
+#set_property -dict { PACKAGE_PIN T15   IOSTANDARD LVCMOS25 } [get_ports {leds_out[1]}]; #IO_L15N_T2_DQS_13 Sch=led[1]
+#set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS25 } [get_ports {leds_out[2]}]; #IO_L17P_T2_13 Sch=led[2]
+#set_property -dict { PACKAGE_PIN U16   IOSTANDARD LVCMOS25 } [get_ports {leds_out[3]}]; #IO_L17N_T2_13 Sch=led[3]
+#set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS25 } [get_ports {leds_out[4]}]; #IO_L14N_T2_SRCC_13 Sch=led[4]
+#set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS25 } [get_ports {leds_out[5]}]; #IO_L16N_T2_13 Sch=led[5]
+#set_property -dict { PACKAGE_PIN W15   IOSTANDARD LVCMOS25 } [get_ports {leds_out[6]}]; #IO_L16P_T2_13 Sch=led[6]
+#set_property -dict { PACKAGE_PIN Y13   IOSTANDARD LVCMOS25 } [get_ports {leds_out[7]}]; #IO_L5P_T0_13 Sch=led[7]
 
 
 ## Buttons
-set_property -dict { PACKAGE_PIN B22 IOSTANDARD LVCMOS12 } [get_ports { rst_in[0] }]; #IO_L20N_T3_16 Sch=btnc
+set_property -dict {PACKAGE_PIN B22 IOSTANDARD LVCMOS12} [get_ports RST]
 #set_property -dict { PACKAGE_PIN D22 IOSTANDARD LVCMOS12 } [get_ports { btnd }]; #IO_L22N_T3_16 Sch=btnd
 #set_property -dict { PACKAGE_PIN C22 IOSTANDARD LVCMOS12 } [get_ports { btnl }]; #IO_L20P_T3_16 Sch=btnl
 #set_property -dict { PACKAGE_PIN D14 IOSTANDARD LVCMOS12 } [get_ports { btnr }]; #IO_L6P_T0_16 Sch=btnr
-set_property -dict { PACKAGE_PIN F15 IOSTANDARD LVCMOS12 } [get_ports { test_btn_in[0] }]; #IO_0_16 Sch=btnu
+#set_property -dict { PACKAGE_PIN F15 IOSTANDARD LVCMOS12 } [get_ports { test_btn_in[0] }]; #IO_0_16 Sch=btnu
 #set_property -dict { PACKAGE_PIN G4  IOSTANDARD LVCMOS15 } [get_ports { cpu_resetn }]; #IO_L12N_T1_MRCC_35 Sch=cpu_resetn
 
 
 ## Switches
-set_property -dict { PACKAGE_PIN E22  IOSTANDARD LVCMOS12 } [get_ports { test_sw_in[0] }]; #IO_L22P_T3_16 Sch=sw[0]
-set_property -dict { PACKAGE_PIN F21  IOSTANDARD LVCMOS12 } [get_ports { test_sw_in[1] }]; #IO_25_16 Sch=sw[1]
-set_property -dict { PACKAGE_PIN G21  IOSTANDARD LVCMOS12 } [get_ports { test_sw_in[2] }]; #IO_L24P_T3_16 Sch=sw[2]
+#set_property -dict { PACKAGE_PIN E22  IOSTANDARD LVCMOS12 } [get_ports { test_sw_in[0] }]; #IO_L22P_T3_16 Sch=sw[0]
+#set_property -dict { PACKAGE_PIN F21  IOSTANDARD LVCMOS12 } [get_ports { test_sw_in[1] }]; #IO_25_16 Sch=sw[1]
+#set_property -dict { PACKAGE_PIN G21  IOSTANDARD LVCMOS12 } [get_ports { test_sw_in[2] }]; #IO_L24P_T3_16 Sch=sw[2]
 #set_property -dict { PACKAGE_PIN G22  IOSTANDARD LVCMOS12 } [get_ports { sw[3] }]; #IO_L24N_T3_16 Sch=sw[3]
 #set_property -dict { PACKAGE_PIN H17  IOSTANDARD LVCMOS12 } [get_ports { sw[4] }]; #IO_L6P_T0_15 Sch=sw[4]
 #set_property -dict { PACKAGE_PIN J16  IOSTANDARD LVCMOS12 } [get_ports { sw[5] }]; #IO_0_15 Sch=sw[5]
@@ -106,10 +106,10 @@ set_property -dict { PACKAGE_PIN G21  IOSTANDARD LVCMOS12 } [get_ports { test_sw
 
 
 ## Pmod header JA
-#set_property -dict { PACKAGE_PIN AB22  IOSTANDARD LVCMOS33 } [get_ports { ja[0] }]; #IO_L10N_T1_D15_14 Sch=ja[1]
-#set_property -dict { PACKAGE_PIN AB21  IOSTANDARD LVCMOS33 } [get_ports { ja[1] }]; #IO_L10P_T1_D14_14 Sch=ja[2]
+set_property -dict {PACKAGE_PIN AB22 IOSTANDARD LVCMOS33} [get_ports snd_pwm]
+set_property -dict {PACKAGE_PIN AB21 IOSTANDARD LVCMOS33} [get_ports LOW]
 #set_property -dict { PACKAGE_PIN AB20  IOSTANDARD LVCMOS33 } [get_ports { ja[2] }]; #IO_L15N_T2_DQS_DOUT_CSO_B_14 Sch=ja[3]
-#set_property -dict { PACKAGE_PIN AB18  IOSTANDARD LVCMOS33 } [get_ports { ja[3] }]; #IO_L17N_T2_A13_D29_14 Sch=ja[4]
+set_property -dict {PACKAGE_PIN AB18 IOSTANDARD LVCMOS33} [get_ports HIGH]
 #set_property -dict { PACKAGE_PIN Y21   IOSTANDARD LVCMOS33 } [get_ports { ja[4] }]; #IO_L9P_T1_DQS_14 Sch=ja[7]
 #set_property -dict { PACKAGE_PIN AA21  IOSTANDARD LVCMOS33 } [get_ports { ja[5] }]; #IO_L8N_T1_D12_14 Sch=ja[8]
 #set_property -dict { PACKAGE_PIN AA20  IOSTANDARD LVCMOS33 } [get_ports { ja[6] }]; #IO_L8P_T1_D11_14 Sch=ja[9]
@@ -117,7 +117,7 @@ set_property -dict { PACKAGE_PIN G21  IOSTANDARD LVCMOS12 } [get_ports { test_sw
 
 
 ## Pmod header JB
-#set_property -dict { PACKAGE_PIN V9    IOSTANDARD LVCMOS33 } [get_ports { jb[0] }]; #IO_L21P_T3_DQS_34 Sch=jb_p[1]
+#set_property -dict { PACKAGE_PIN V9    IOSTANDARD LVCMOS33 } [get_ports { snd_pwm }]; #IO_L21P_T3_DQS_34 Sch=jb_p[1]
 #set_property -dict { PACKAGE_PIN V8    IOSTANDARD LVCMOS33 } [get_ports { jb[1] }]; #IO_L21N_T3_DQS_34 Sch=jb_n[1]
 #set_property -dict { PACKAGE_PIN V7    IOSTANDARD LVCMOS33 } [get_ports { jb[2] }]; #IO_L19P_T3_34 Sch=jb_p[2]
 #set_property -dict { PACKAGE_PIN W7    IOSTANDARD LVCMOS33 } [get_ports { jb[3] }]; #IO_L19N_T3_VREF_34 Sch=jb_n[2]
@@ -310,3 +310,54 @@ set_property -dict { PACKAGE_PIN N13   IOSTANDARD LVCMOS33   PULLUP true } [get_
 ## Configuration options, can be used for all designs
 set_property CONFIG_VOLTAGE 3.3 [current_design]
 set_property CFGBVS VCCO [current_design]
+
+
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_top/u_jt03/snd_right[0]} {u_top/u_jt03/snd_right[1]} {u_top/u_jt03/snd_right[2]} {u_top/u_jt03/snd_right[3]} {u_top/u_jt03/snd_right[4]}]]
+connect_debug_port u_ila_0/probe1 [get_nets [list {u_top/u_jt03/u_jt12/snd_left[0]} {u_top/u_jt03/u_jt12/snd_left[1]} {u_top/u_jt03/u_jt12/snd_left[2]} {u_top/u_jt03/u_jt12/snd_left[3]} {u_top/u_jt03/u_jt12/snd_left[4]}]]
+connect_debug_port u_ila_1/probe0 [get_nets [list {u_top/u_jt03/u_jt12/Q[0]} {u_top/u_jt03/u_jt12/Q[1]} {u_top/u_jt03/u_jt12/Q[2]} {u_top/u_jt03/u_jt12/Q[3]}]]
+
+
+
+
+
+
+connect_debug_port u_ila_0/clk [get_nets [list CLK_4_BUFG]]
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_top/u_jt03/ch_din_reg[7][0]} {u_top/u_jt03/ch_din_reg[7][1]} {u_top/u_jt03/ch_din_reg[7][2]} {u_top/u_jt03/ch_din_reg[7][3]} {u_top/u_jt03/ch_din_reg[7][4]} {u_top/u_jt03/ch_din_reg[7][5]} {u_top/u_jt03/ch_din_reg[7][6]} {u_top/u_jt03/ch_din_reg[7][7]}]]
+connect_debug_port u_ila_0/probe1 [get_nets [list {u_top/u_jt03/u_jt12/ch_din_reg[7][0]} {u_top/u_jt03/u_jt12/ch_din_reg[7][1]} {u_top/u_jt03/u_jt12/ch_din_reg[7][2]} {u_top/u_jt03/u_jt12/ch_din_reg[7][3]} {u_top/u_jt03/u_jt12/ch_din_reg[7][4]} {u_top/u_jt03/u_jt12/ch_din_reg[7][5]} {u_top/u_jt03/u_jt12/ch_din_reg[7][6]} {u_top/u_jt03/u_jt12/ch_din_reg[7][7]}]]
+connect_debug_port u_ila_0/probe3 [get_nets [list {u_top/D[0]} {u_top/D[1]} {u_top/D[2]} {u_top/D[3]} {u_top/D[4]} {u_top/D[5]} {u_top/D[6]} {u_top/D[7]}]]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][0]}]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][1]}]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][2]}]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][3]}]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][4]}]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][5]}]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][6]}]
+set_property MARK_DEBUG false [get_nets {u_top/u_jt03/ch_din_reg[7][7]}]
+connect_debug_port dbg_hub/clk [get_nets CLK_4_BUFG]
+
+
+
+
+
+set_property MARK_DEBUG true [get_nets {DIN[5]}]
+set_property MARK_DEBUG true [get_nets {DIN[7]}]
+set_property MARK_DEBUG true [get_nets {DIN[0]}]
+set_property MARK_DEBUG true [get_nets {DIN[1]}]
+set_property MARK_DEBUG true [get_nets {DIN[2]}]
+set_property MARK_DEBUG true [get_nets {DIN[4]}]
+set_property MARK_DEBUG true [get_nets {DIN[6]}]
+set_property MARK_DEBUG true [get_nets {DIN[3]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[0]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[5]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[6]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[7]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[1]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[2]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[3]}]
+set_property MARK_DEBUG true [get_nets {u_top/D[4]}]
+connect_debug_port u_ila_0/clk [get_nets [list CLK_4_BUFG]]
+connect_debug_port dbg_hub/clk [get_nets CLK_4_BUFG]
+
+
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_top/p_1_in[15]}]]
+

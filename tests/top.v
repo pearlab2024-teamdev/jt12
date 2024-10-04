@@ -23,6 +23,7 @@
 module top(
     input           rst,        //#IC rst should be at least 6 clk & cen cycles long
     input           clk_in,        // CPU clock
+    input           clk_100,
     input           cen,        // optional clock enable, if not needed leave as 1'b1
     input   [7:0]   din,        //D0~D7(入力)
     input           addr,       //A0
@@ -47,17 +48,17 @@ module top(
     output          [ 9:0] psg_snd,
     output  signed  [15:0] snd,
     output                 snd_sample,
-    output                 snd_pwm
+    output                 snd_pwm,
+    output testout
     // Debug
     //input           [ 7:0] debug_bus,
     //output          [ 7:0] debug_view
     );
     
-    wire clk;
-    
+   wire clk50;
    jt03 u_jt03(
         .rst(rst),
-        .clk(clk),
+        .clk(clk_in),
         .cen(cen),
         .din(din),
         .addr(addr),
@@ -82,16 +83,36 @@ module top(
         .debug_view(debug_view)
         );
         
-    pwm_6bit pwm(
-        .CLK(clk),
-        .RESET(rst),
-        .signalIn(psg_snd[9:4]),
-        .pwmOut(snd_pwm)
+    //pwm_6bit_signed pwm(
+        //.CLK(clk_100),
+        //.RESET(rst),
+        //.signalIn(snd[15:10]),
+        //.pwmOut(snd_pwm)
+    //);
+   clk_wiz_0 instance_name
+   (
+    // Clock out ports
+        .clk_out1(clk50),     // output clk_out1
+        // Status and control signals
+        .reset(rst), // input reset
+        //.locked(locked),       // output locked
+       // Clock in ports
+        .clk_in1(clk_100)      // input clk_in1
+    );
+
+    pcm_to_pwm pwm(
+        .clk(clk50),
+        .rst(rst),
+        .pcm_in(snd),
+//        .pcm_in(0),
+        .pwm_out(snd_pwm)
+    );
+     pcm_to_pwm test_out(
+        .clk(clk50),
+        .rst(rst),
+        .pcm_in(0),
+//        .pcm_in(0),
+        .pwm_out(testout)
     );
     
-  // インスタンス化
-BUFG bufg_inst (
-    .I(clk_in),
-    .O(clk)
-);  
 endmodule

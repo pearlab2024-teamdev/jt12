@@ -1,0 +1,307 @@
+/*
+
+AMD Vivado v2024.1 (64-bit) [Major: 2024, Minor: 1]
+SW Build: 5076996 on Wed May 22 18:36:09 MDT 2024
+IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+IP Build: 5075265 on Wed May 22 21:45:21 MDT 2024
+
+Process ID (PID): 560266
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue Sep 10 14:33:01 JST 2024
+Time zone: 	Japan Standard Time (Asia/Tokyo)
+
+OS: Ubuntu
+OS Version: 5.15.0-117-generic
+OS Architecture: amd64
+Available processors (cores): 16
+LSB Release Description: NAME=Ubuntu
+
+Display: 0
+Screen size: 2560x1080
+Local screen bounds: x = 1920, y = 0, width = 2560, height = 1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.1 64-bit
+JavaFX version: 21.0.1
+Java home: 	/tools/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12
+Java executable: 	/tools/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	tsukano
+User home directory: /home/fss4/tsukano
+User working directory: /home/fss4/tsukano/jt12/vivado
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2024.1
+RDI_DATADIR: /tools/Xilinx/Vivado/2024.1/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2024.1/bin
+
+Vivado preferences file: /home/fss4/tsukano/.Xilinx/Vivado/2024.1/vivado.xml
+Vivado preferences directory: /home/fss4/tsukano/.Xilinx/Vivado/2024.1/
+Vivado layouts directory: /home/fss4/tsukano/.Xilinx/Vivado/2024.1/data/layouts
+PlanAhead jar file: 	/tools/Xilinx/Vivado/2024.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/fss4/tsukano/jt12/vivado/vivado.log
+Vivado journal file: 	/home/fss4/tsukano/jt12/vivado/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-560266-norfair
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+GNOME_SHELL_SESSION_MODE: ubuntu
+RDI_APPROOT: /tools/Xilinx/Vivado/2024.1
+RDI_BASEROOT: /tools/Xilinx/Vivado
+RDI_BINROOT: /tools/Xilinx/Vivado/2024.1/bin
+RDI_BUILD: yes
+RDI_DATADIR: /tools/Xilinx/Vivado/2024.1/data
+RDI_INSTALLROOT: /tools/Xilinx
+RDI_INSTALLVER: 2024.1
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: /tools/Xilinx/Vivado/2024.1/lib/lnx64.o/Ubuntu/20:/tools/Xilinx/Vivado/2024.1/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vivado/2024.1/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /tools/Xilinx/Vivado/2024.1/ids_lite/ISE/bin/lin64
+RDI_PROG: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/fss4/tsukano/jt12/vivado:norfair_1725946367_560225
+RDI_SHARED_DATA: /tools/Xilinx/SharedData/2024.1/data
+RDI_TPS_ROOT: /tools/Xilinx/Vivado/2024.1/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /bin/bash
+XILINX: /tools/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis_HLS/2024.1
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2024.1
+XILINX_VIVADO: /tools/Xilinx/Vivado/2024.1
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2024.1
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,518 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// HOptionPane Error: 'Can't open project 'ym2203_project'. Please verify that the project file still exists. (Open Project)'
+selectButton("OptionPane.button", "OK", "Open Project"); // JButton (OptionPane.button)
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // t (PAResourceEtoH.GettingStartedView_OPEN_PROJECT)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,577 MB. GUI used memory: 75 MB. Current time: 9/10/24, 2:33:02 PM JST
+setFileChooser("/home/fss4/tsukano/jt12/vivado/ym2203_project/ym2203_project.xpr");
+// Opening Vivado Project: /home/fss4/tsukano/jt12/vivado/ym2203_project/ym2203_project.xpr. Version: Vivado v2024.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/fss4/tsukano/jt12/vivado/ym2203_project/ym2203_project.xpr 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 133 MB (+137025kb) [00:00:14]
+// [Engine Memory]: 1,608 MB (+1534884kb) [00:00:14]
+// [Engine Memory]: 1,691 MB (+2642kb) [00:00:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  1633 ms.
+// Tcl Message: open_project /home/fss4/tsukano/jt12/vivado/ym2203_project/ym2203_project.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/fss4/tsukano/jt12/vivado/ym2203_project/ym2203_project.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.1/data/ip'. 
+// [GUI Memory]: 152 MB (+12903kb) [00:00:16]
+// Project name: ym2203_project; location: /home/fss4/tsukano/jt12/vivado/ym2203_project; part: xc7a200tsbg484-1
+dismissDialog("Open Project"); // bj (Open Project Progress)
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 12 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 30); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 31); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, add_selector_test (add_selector_test.v)]", 33); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, add_selector_test (add_selector_test.v)]", 33); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, add_selector_test (add_selector_test.v)]", 33); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, add_selector_test (add_selector_test.v)]", 33); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, add_selector_test (add_selector_test.v)]", 33); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, add_selector_test (add_selector_test.v)]", 33); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, add_selector_test (add_selector_test.v)]", 33, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, add_selector_test (add_selector_test.v)]", 33, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 1,817 MB. GUI used memory: 81 MB. Current time: 9/10/24, 2:33:42 PM JST
+selectCodeEditor("add_selector_test.v", 26, 173); // ac (add_selector_test.v)
+selectCodeEditor("add_selector_test.v", 15, 172); // ac (add_selector_test.v)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, add_selector (add_selector.v)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, add_selector (add_selector.v)]", 2, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// [Engine Memory]: 1,814 MB (+40535kb) [00:00:55]
+selectCodeEditor("add_selector.v", 60, 284); // ac (add_selector.v)
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, add_selector_test (add_selector_test.v)]", 34, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, add_selector_test (add_selector_test.v)]", 34, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectCodeEditor("add_selector_test.v", 134, 445); // ac (add_selector_test.v)
+// Elapsed time: 14 seconds
+selectCodeEditor("add_selector_test.v", 266, 486); // ac (add_selector_test.v)
+selectCodeEditor("add_selector_test.v", 261, 463); // ac (add_selector_test.v)
+selectCodeEditor("add_selector_test.v", 157, 476); // ac (add_selector_test.v)
+selectCodeEditor("add_selector_test.v", 182, 475); // ac (add_selector_test.v)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 01m:20s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,885 MB. GUI used memory: 82 MB. Current time: 9/10/24, 2:34:27 PM JST
+// Elapsed Time for: 'L.f': 01m:24s
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, sine_a4_test (sine_a4_test.v)]", 48, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, sine_a4_test (sine_a4_test.v)]", 48, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 1,899 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:34:42 PM JST
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "add_selector_test.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("add_selector_test.v", 118, 475); // ac (add_selector_test.v)
+selectCodeEditor("add_selector_test.v", 277, 481); // ac (add_selector_test.v)
+selectCodeEditor("add_selector_test.v", 81, 476); // ac (add_selector_test.v)
+// [GUI Memory]: 161 MB (+1269kb) [00:02:10]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ap (PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, simulation_run_behavioral_menu)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// Elapsed time: 12 seconds
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save", "Save Project"); // a (PAResourceQtoS.SaveProjectUtils_SAVE)
+dismissDialog("Save Project"); // Z.d (dialog1)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,929 MB (+25435kb) [00:02:25]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,939 MB. GUI used memory: 85 MB. Current time: 9/10/24, 2:35:17 PM JST
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'add_selector_test' 
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/fss4/tsukano/jt12/vivado/ym2203_project/ym2203_project.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.1/tps/boost_1_72_0' INFO: [SIM-utils-54] Inspecting design source files for 'add_selector_test' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background", "Run Simulation"); // a (RDIResource.ProgressDialog_BACKGROUND)
+// 'd' command handler elapsed time: 17 seconds
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/fss4/tsukano/jt12/vivado/ym2203_project/ym2203_project.sim/sim_1/behav/xsim' 
+// Tcl Message: xvlog --incr --relax -prj add_selector_test_vlog.prj 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,928 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:35:47 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,928 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:36:17 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,928 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:36:47 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,928 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:37:17 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,928 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:37:47 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,928 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:38:17 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,928 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:38:47 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,928 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:39:17 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,928 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:39:47 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,928 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:40:17 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,928 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:40:47 PM JST
+// Elapsed time: 335 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "add_selector_test.v", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,021 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:41:17 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,021 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:41:47 PM JST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1988 ms. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,021 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:42:17 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,021 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:42:47 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,021 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:43:17 PM JST
+// Elapsed time: 156 seconds
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aa
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aa
+selectCheckBox(PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String) null, false); // f (PAResourceItoN.MsgView_CRITICAL_WARNINGS): FALSE
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // f (PAResourceItoN.MsgView_WARNING_MESSAGES): FALSE
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // f (PAResourceItoN.MsgView_INFORMATION_MESSAGES): FALSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,022 MB. GUI used memory: 85 MB. Current time: 9/10/24, 2:43:47 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,022 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:44:17 PM JST
+// Elapsed time: 39 seconds
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aa
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aa
+selectTab((HResource) null, (HResource) null, "Log", 2); // aa
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 828 ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,022 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:44:47 PM JST
+// Elapsed time: 17 seconds
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aa
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aa
+selectTab((HResource) null, (HResource) null, "Log", 2); // aa
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 43, 84); // B (PAResourceItoN.LogMonitor_MONITOR, Monitor)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 20, 65); // B (PAResourceItoN.LogMonitor_MONITOR, Monitor)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 344, 81); // B (PAResourceItoN.LogMonitor_MONITOR, Monitor)
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aa
+selectTab((HResource) null, (HResource) null, "Log", 2); // aa
+// HMemoryUtils.trashcanNow. Engine heap size: 2,022 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:45:17 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,022 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:45:47 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,022 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:46:17 PM JST
+// Elapsed time: 82 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, add_selector_test (add_selector_test.v)]", 34, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, add_selector_test (add_selector_test.v)]", 34, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, add_selector (add_selector.v)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, add_selector (add_selector.v)]", 2, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectCodeEditor("add_selector.v", 156, 250); // ac (add_selector.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,023 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:46:47 PM JST
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree) - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 2,023 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:47:17 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,024 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:47:47 PM JST
+// Elapsed time: 76 seconds
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aa
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 188, 134); // cC (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)
+selectButton("HStatusBar_ProgressStatusItem_Cancel", "Cancel"); // NullButton (HStatusBar_ProgressStatusItem_Cancel)
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,024 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:48:17 PM JST
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation", true); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+// Elapsed time: 20 seconds
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,024 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:48:47 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,024 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:49:17 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,024 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:49:47 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,024 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:50:17 PM JST
+// Elapsed time: 107 seconds
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,024 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:50:47 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,024 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:51:17 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,024 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:51:47 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,024 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:52:17 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,024 MB. GUI used memory: 84 MB. Current time: 9/10/24, 2:52:47 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,024 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:53:17 PM JST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,024 MB. GUI used memory: 83 MB. Current time: 9/10/24, 2:53:47 PM JST
+// Elapsed time: 215 seconds
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "reset_simulation"); // h.b (RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE)

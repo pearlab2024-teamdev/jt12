@@ -3,123 +3,44 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="sine_a4_test_behav.wdb" id="1">
+      <db_ref path="add_selector_test_behav.wdb" id="1">
          <top_modules>
+            <top_module name="add_selector_test" />
             <top_module name="glbl" />
-            <top_module name="sine_a4_test" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
-      <ZoomEndTime time="70.314469916 ms"></ZoomEndTime>
-      <Cursor1Time time="4.000000000 ms"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="7,010.001 ns"></ZoomEndTime>
+      <Cursor1Time time="3,260.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="91"></NameColumnWidth>
-      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+      <ValueColumnWidth column_width="74"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="24" />
-   <wvobject fp_name="/sine_a4_test/RST" type="logic">
-      <obj_property name="ElementShortName">RST</obj_property>
-      <obj_property name="ObjectShortName">RST</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/CLK_IN" type="logic">
-      <obj_property name="ElementShortName">CLK_IN</obj_property>
-      <obj_property name="ObjectShortName">CLK_IN</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/CEN" type="logic">
-      <obj_property name="ElementShortName">CEN</obj_property>
-      <obj_property name="ObjectShortName">CEN</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/DIN" type="array">
-      <obj_property name="ElementShortName">DIN[7:0]</obj_property>
-      <obj_property name="ObjectShortName">DIN[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/ADDR" type="logic">
-      <obj_property name="ElementShortName">ADDR</obj_property>
-      <obj_property name="ObjectShortName">ADDR</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/CS_N" type="logic">
-      <obj_property name="ElementShortName">CS_N</obj_property>
-      <obj_property name="ObjectShortName">CS_N</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/WR_N" type="logic">
-      <obj_property name="ElementShortName">WR_N</obj_property>
-      <obj_property name="ObjectShortName">WR_N</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/IOA_IN" type="array">
-      <obj_property name="ElementShortName">IOA_IN[7:0]</obj_property>
-      <obj_property name="ObjectShortName">IOA_IN[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/IOB_IN" type="array">
-      <obj_property name="ElementShortName">IOB_IN[7:0]</obj_property>
-      <obj_property name="ObjectShortName">IOB_IN[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/DOUT" type="array">
-      <obj_property name="ElementShortName">DOUT[7:0]</obj_property>
-      <obj_property name="ObjectShortName">DOUT[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/irq_n" type="logic">
-      <obj_property name="ElementShortName">irq_n</obj_property>
-      <obj_property name="ObjectShortName">irq_n</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/IOA_oe" type="logic">
-      <obj_property name="ElementShortName">IOA_oe</obj_property>
-      <obj_property name="ObjectShortName">IOA_oe</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/IOB_oe" type="logic">
-      <obj_property name="ElementShortName">IOB_oe</obj_property>
-      <obj_property name="ObjectShortName">IOB_oe</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/psg_A" type="array">
-      <obj_property name="ElementShortName">psg_A[7:0]</obj_property>
-      <obj_property name="ObjectShortName">psg_A[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/psg_B" type="array">
-      <obj_property name="ElementShortName">psg_B[7:0]</obj_property>
-      <obj_property name="ObjectShortName">psg_B[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/psg_C" type="array">
-      <obj_property name="ElementShortName">psg_C[7:0]</obj_property>
-      <obj_property name="ObjectShortName">psg_C[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/fm_snd" type="array">
+   <WVObjectSize size="5" />
+   <wvobject type="array" fp_name="/add_selector_test/uut/fm_snd">
       <obj_property name="ElementShortName">fm_snd[15:0]</obj_property>
       <obj_property name="ObjectShortName">fm_snd[15:0]</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/sine_a4_test/psg_snd" type="array">
-      <obj_property name="ElementShortName">psg_snd[9:0]</obj_property>
-      <obj_property name="ObjectShortName">psg_snd[9:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/snd" type="array">
-      <obj_property name="ElementShortName">snd[15:0]</obj_property>
-      <obj_property name="ObjectShortName">snd[15:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/snd_pwm" type="logic">
+   <wvobject type="logic" fp_name="/add_selector_test/uut/snd_pwm">
       <obj_property name="ElementShortName">snd_pwm</obj_property>
       <obj_property name="ObjectShortName">snd_pwm</obj_property>
    </wvobject>
-   <wvobject fp_name="/sine_a4_test/snd_sample" type="logic">
-      <obj_property name="ElementShortName">snd_sample</obj_property>
-      <obj_property name="ObjectShortName">snd_sample</obj_property>
+   <wvobject type="logic" fp_name="/add_selector_test/uut/CLK_IN">
+      <obj_property name="ElementShortName">CLK_IN</obj_property>
+      <obj_property name="ObjectShortName">CLK_IN</obj_property>
    </wvobject>
-   <wvobject fp_name="/sine_a4_test/debug_view" type="array">
-      <obj_property name="ElementShortName">debug_view[7:0]</obj_property>
-      <obj_property name="ObjectShortName">debug_view[7:0]</obj_property>
+   <wvobject type="logic" fp_name="/add_selector_test/uut/CLK_4">
+      <obj_property name="ElementShortName">CLK_4</obj_property>
+      <obj_property name="ObjectShortName">CLK_4</obj_property>
    </wvobject>
-   <wvobject fp_name="/sine_a4_test/IOA_OUT" type="array">
-      <obj_property name="ElementShortName">IOA_OUT[7:0]</obj_property>
-      <obj_property name="ObjectShortName">IOA_OUT[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/sine_a4_test/IOB_OUT" type="array">
-      <obj_property name="ElementShortName">IOB_OUT[7:0]</obj_property>
-      <obj_property name="ObjectShortName">IOB_OUT[7:0]</obj_property>
+   <wvobject type="logic" fp_name="/add_selector_test/RST">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
    </wvobject>
 </wave_config>
